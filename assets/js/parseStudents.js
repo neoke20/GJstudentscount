@@ -1,8 +1,11 @@
 fetch("./students.json")
     .then(Response => Response.json())
     .then(data => {
-      console.log(data);
-  		data.forEach((element, index) => {
+      // Get the length of array to know total students
+      const totalStudents = data.length;
+      document.getElementById("total-students").insertAdjacentText('afterbegin', totalStudents);
+      // Will display all students in a table
+      data.forEach((element, index) => {
         document.getElementById("student-table").insertAdjacentHTML('beforeend', `<tr>
         <th scope="row">${index + 1}</th>
         <td>${element[`Given Names`]}</td>

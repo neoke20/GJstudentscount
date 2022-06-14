@@ -10,23 +10,28 @@
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-  <table class="table table-striped">
-    <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">First</th>
-        <th scope="col">Last</th>
-        <th scope="col">Agent</th>
-        <th scope="col">Course Start</th>
-        <th scope="col">Course End</th>
-        <th scope="col">Current Center</th>
-        <th scope="col">Contact Email</th>
-        <th scope="col">Visa Type</th>
-      </tr>
-    </thead>
-    <tbody id="student-table">
-    </tbody>
-  </table>
+  <div>
+    <p>Total students: <span id="total-students"></span></p>
+  </div>
+  <div>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">First</th>
+          <th scope="col">Last</th>
+          <th scope="col">Agent</th>
+          <th scope="col">Course Start</th>
+          <th scope="col">Course End</th>
+          <th scope="col">Current Center</th>
+          <th scope="col">Contact Email</th>
+          <th scope="col">Visa Type</th>
+        </tr>
+      </thead>
+      <tbody id="student-table">
+      </tbody>
+    </table>
+  </div>
 <script src="assets/js/parseStudents.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>

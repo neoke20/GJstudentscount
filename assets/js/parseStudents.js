@@ -33,7 +33,7 @@ fetch("./students.json")
       }
       // Collecting data iterating over Array to create table and count students
       data.forEach((element, index) => {
-        // Check if start date corresponds to date and add 1 to counter
+        // Check if start date was before the date and the end date is after to increase counter. This means students will be in school on that specific week
         dates.forEach(item => {
           dateConversion(element[`Course Start`]).getTime() <= dateConversion(item.date).getTime() && dateConversion(element[`Course End`]).getTime() >= dateConversion(item.date).getTime() ? item.counter++ : "";
         });

@@ -26,11 +26,16 @@ fetch("./students.json")
       // Get the length of array to know total students
       const totalStudents = data.length;
       document.getElementById("total-students").insertAdjacentText('afterbegin', totalStudents);
+      function dateConversion(string) {
+        const dateParts = string.split("/");
+        const dateObject = new Date(+dateParts[2], dateParts[1] - 1, +dateParts[0]);
+        return dateObject;
+      }
       // Collecting data iterating over Array to create table and count students
       data.forEach((element, index) => {
-
+        // Check if start date corresponds to date and add 1 to counter
         dates.forEach(item => {
-          item.date == element[`Course Start`] ? item.counter++ : "";
+          dateConversion(item.date).getTime() == dateConversion(element[`Course Start`]).getTime() ? item.counter++ : "";
         });
 
         document.getElementById("student-table").insertAdjacentHTML('beforeend', `<tr>
@@ -45,7 +50,7 @@ fetch("./students.json")
       </tr>`)
       });
           // Display all the dates we are tracking
-dates.forEach(item => {
-  document.getElementById('date-table').insertAdjacentHTML('beforeend', `<p>${item.date}: ${item.counter}</p>`);
-});
+      dates.forEach(item => {
+        document.getElementById('date-table').insertAdjacentHTML('beforeend', `<p>${item.date}: ${item.counter}</p>`);
+      });
     });

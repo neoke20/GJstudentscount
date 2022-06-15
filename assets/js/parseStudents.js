@@ -1,45 +1,18 @@
-const dates = [
-  {
-    "date": "20/06/2022",
-    "counter": 0
-  },
-  {
-    "date": "27/06/2022",
-    "counter": 0
-  },
-  {
-    "date": "04/07/2022",
-    "counter": 0
-  },
-  {
-    "date": "11/07/2022",
-    "counter": 0
-  },
-  {
-    "date": "18/07/2022",
-    "counter": 0
-  },
-  {
-    "date": "25/07/2022",
-    "counter": 0
-  },
-  {
-    "date": "01/08/2022",
-    "counter": 0
-  },
-  {
-    "date": "08/08/2022",
-    "counter": 0
-  },
-  {
-    "date": "15/08/2022",
-    "counter": 0
-  },
-];
+const dates =
+  [
+    {"date":"20/06/2022",
+     "counter":0},
+    {"date":"27/06/2022",
+     "counter":0},
+     {"date":"04/07/2022",
+     "counter":0},
+     {"date":"11/07/2022",
+     "counter":0},
+     {"date":"18/07/2022",
+     "counter":0},
+  ];
 
-dates.forEach(date => {
-  document.getElementById('date-table').insertAdjacentHTML('beforeend', `<p>${date.date}: ${date.counter}</p>`)
-});
+console.log(dates);
 
 fetch("./students.json")
     .then(Response => Response.json())

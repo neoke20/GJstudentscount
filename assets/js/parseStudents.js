@@ -3,9 +3,11 @@ fetch("./students.json")
     .then(data => {
       // Get the length of array to know total students
       const totalStudents = data.length;
+      let julyIntake = 0;
       document.getElementById("total-students").insertAdjacentText('afterbegin', totalStudents);
-      // Will display all students in a table
+      // Collecting data iterating over Array to create table and count students
       data.forEach((element, index) => {
+        element[`Course Start`] == "01/08/2022" ? julyIntake++ : julyIntake;
         document.getElementById("student-table").insertAdjacentHTML('beforeend', `<tr>
         <th scope="row">${index + 1}</th>
         <td>${element[`Given Names`]}</td>
@@ -18,4 +20,5 @@ fetch("./students.json")
         <td>${element[`Visa Type`]}</td>
       </tr>`)
       });
+      document.getElementById("july-students").insertAdjacentText('afterbegin', julyIntake);
     });

@@ -17,7 +17,6 @@ fetch("./students.json")
         <td>${element[`Course End`]}</td>
         <td>${element[`Current Center`]}</td>
         <td class="email">${element[`Contact Email`]}</td>
-        <td>${element[`Visa Type`]}</td>
       </tr>`)
       });
       document.getElementById("july-students").insertAdjacentText('afterbegin', julyIntake);

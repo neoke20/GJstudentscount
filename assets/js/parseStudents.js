@@ -10,9 +10,22 @@ const dates =
      "counter":0},
      {"date":"18/07/2022",
      "counter":0},
+     {"date":"25/07/2022",
+     "counter":0},
+     {"date":"01/08/2022",
+     "counter":0},
+     {"date":"08/08/2022",
+     "counter":0},
+     {"date":"15/08/2022",
+     "counter":0},
+     {"date":"22/08/2022",
+     "counter":0},
   ];
 
-console.log(dates);
+// Display all the dates we are tracking
+dates.forEach(item => {
+  document.getElementById('date-table').insertAdjacentHTML('beforeend', `<p>${item.date}: ${item.counter}</p>`);
+});
 
 fetch("./students.json")
     .then(Response => Response.json())

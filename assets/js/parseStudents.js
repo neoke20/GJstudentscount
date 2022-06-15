@@ -35,7 +35,7 @@ fetch("./students.json")
       data.forEach((element, index) => {
         // Check if start date corresponds to date and add 1 to counter
         dates.forEach(item => {
-          dateConversion(item.date).getTime() == dateConversion(element[`Course Start`]).getTime() ? item.counter++ : "";
+          dateConversion(element[`Course Start`]).getTime() <= dateConversion(item.date).getTime() && dateConversion(element[`Course End`]).getTime() >= dateConversion(item.date).getTime() ? item.counter++ : "";
         });
 
         document.getElementById("student-table").insertAdjacentHTML('beforeend', `<tr>

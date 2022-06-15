@@ -1,3 +1,28 @@
+const dates = [
+  {
+    "date": "20/06/2022",
+    "counter": 0
+  },
+  {
+    "date": "27/06/2022",
+    "counter": 0
+  },
+  {
+    "date": "04/07/2022",
+    "counter": 0
+  },
+  {
+    "date": "12/07/2022",
+    "counter": 0
+  },
+  {
+    "date": "19/07/2022",
+    "counter": 0
+  },
+];
+
+console.log(dates);
+
 fetch("./students.json")
     .then(Response => Response.json())
     .then(data => {

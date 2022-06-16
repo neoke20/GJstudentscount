@@ -51,6 +51,6 @@ fetch("./students.json")
       });
           // Display all the dates we are tracking
       dates.forEach(item => {
-        document.getElementById('date-table').insertAdjacentHTML('beforeend', `<div class="week"><p>${item.date}:</p><p>${item.counter}</p></div>`);
+        document.getElementById('date-table').insertAdjacentHTML('beforeend', `<div class="week"><p>${item.date}:</p><p class="counter">${item.counter} students</p></div>`);
       });
     });

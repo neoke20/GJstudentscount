@@ -8,6 +8,8 @@
 .week {
   display: flex;
   flex-direction: column;
+  border: 1px solid rgba(50, 50, 50, 0.5);
+  margin: 2px;
 }
 .week p {
   text-align: center;

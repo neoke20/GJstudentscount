@@ -1,7 +1,7 @@
 .email {
   font-size: 12px;
 }
-.date-table {
+#date-table {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }

@@ -5,3 +5,10 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
+.week {
+  display: flex;
+  flex-direction: column;
+}
+.week p {
+  text-align: center;
+}

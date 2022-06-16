@@ -271,9 +271,6 @@ fetch("./students.json")
      {"date":"30/12/2024",
      "counter":0},
   ];
-      // Get the length of array to know total students
-      const totalStudents = data.length;
-      document.getElementById("total-students").insertAdjacentText('afterbegin', totalStudents);
       function dateConversion(string) {
         const dateParts = string.split("/");
         const dateObject = new Date(+dateParts[2], dateParts[1] - 1, +dateParts[0]);

@@ -18,3 +18,21 @@
 .counter {
   font-weight: bold;
 }
+.light-green-background {
+  background-color: #DCEDC8;
+}
+.mid-green-background {
+  background-color: #8BC34A;
+}
+.dark-green-background {
+  background-color: #689F38;
+}
+.light-red-background {
+  background-color: #FFCCBC;
+}
+.mid-red-background {
+  background-color: #FF5722;
+}
+.dark-red-background {
+  background-color: #E64A19;
+}

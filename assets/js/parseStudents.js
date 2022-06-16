@@ -299,6 +299,27 @@ fetch("./students.json")
       });
           // Display all the dates we are tracking
       dates.forEach(item => {
-        document.getElementById('date-table').insertAdjacentHTML('beforeend', `<div class="week"><p>${item.date}:</p><p class="counter">${item.counter} students</p></div>`);
+        document.getElementById('date-table').insertAdjacentHTML('beforeend', `<div class="week"><p>${item.date}:</p><p><span class="counter">${item.counter}</span> students</p></div>`);
       });
+      const weekDiv = document.getElementsByClassName("week");
+      for (let item of weekDiv) {
+        if (item.querySelector(".counter").innerHTML <= 20) {
+          item.classList.add("light-green-background")
+        }
+        else if (item.querySelector(".counter").innerHTML > 20 && item.querySelector(".counter").innerHTML <= 40) {
+          item.classList.add("mid-green-background")
+        }
+        else if (item.querySelector(".counter").innerHTML > 40 && item.querySelector(".counter").innerHTML <= 60) {
+          item.classList.add("dark-green-background")
+        }
+        else if (item.querySelector(".counter").innerHTML > 60 && item.querySelector(".counter").innerHTML <= 80) {
+          item.classList.add("light-red-background")
+        }
+        else if (item.querySelector(".counter").innerHTML > 80 && item.querySelector(".counter").innerHTML <= 100) {
+          item.classList.add("mid-red-background")
+        }
+        else if (item.querySelector(".counter").innerHTML > 60 && item.querySelector(".counter").innerHTML <= 80) {
+          item.classList.add("dark-red-background")
+        }
+      }
     });

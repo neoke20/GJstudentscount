@@ -286,6 +286,7 @@ fetch("./students.json")
         dates.forEach(item => {
           dateConversion(element[`Course Start`]).getTime() <= dateConversion(item.date).getTime() && dateConversion(element[`Course End`]).getTime() >= dateConversion(item.date).getTime() ? item.counter++ : "";
         });
+        // conditional will only add students whose end date is after today, so no finished students will be added to the table
         if (dateConversion(element[`Course End`]).getTime() >= today.getTime()) {
           document.getElementById("student-table").insertAdjacentHTML('beforeend', `<tr>
           <th scope="row">${index + 1}</th>

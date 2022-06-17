@@ -3,7 +3,7 @@
 }
 #date-table {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 .week {
   display: flex;
@@ -41,4 +41,9 @@
 }
 .red {
   background-color: #FF5252;
+}
+@media (max-width: 1000px) {
+  #date-table {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
 }

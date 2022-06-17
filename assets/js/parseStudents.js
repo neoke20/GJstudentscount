@@ -315,7 +315,16 @@ fetch("./students.json")
         else if (item.querySelector(".counter").innerHTML > 80 && item.querySelector(".counter").innerHTML <= 100) {
           item.classList.add("mid-red-background")
         }
-        else if (item.querySelector(".counter").innerHTML > 60 && item.querySelector(".counter").innerHTML <= 80) {
+        else if (item.querySelector(".counter").innerHTML > 80 && item.querySelector(".counter").innerHTML <= 100) {
+          item.classList.add("dark-red-background")
+        }
+        else if (item.querySelector(".counter").innerHTML > 100 && item.querySelector(".counter").innerHTML <= 120) {
+          item.classList.add("dark-red-background")
+        }
+        else if (item.querySelector(".counter").innerHTML > 120 && item.querySelector(".counter").innerHTML <= 130) {
+          item.classList.add("dark-red-background")
+        }
+        else {
           item.classList.add("dark-red-background")
         }
       }

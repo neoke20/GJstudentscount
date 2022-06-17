@@ -1,6 +1,7 @@
 fetch("./students.json")
     .then(Response => Response.json())
     .then(data => {
+      const options = { year: 'numeric', month: 'long', day: 'numeric' };
       let dates = [
     {"date":"20/06/2022",
      "counter":0},
@@ -296,27 +297,33 @@ fetch("./students.json")
       });
           // Display all the dates we are tracking
       dates.forEach(item => {
-        document.getElementById('date-table').insertAdjacentHTML('beforeend', `<div class="week"><p>${item.date}:</p><p><span class="counter">${item.counter}</span> students</p></div>`);
+        document.getElementById('date-table').insertAdjacentHTML('beforeend', `<div class="week"><p>${dateConversion(item.date).toLocaleDateString("en-US", options)}:</p><p><span class="counter">${item.counter}</span> students</p></div>`);
       });
       const weekDiv = document.getElementsByClassName("week");
       for (let item of weekDiv) {
         if (item.querySelector(".counter").innerHTML <= 20) {
-          item.classList.add("light-green-background")
+          item.classList.add("green20")
         }
         else if (item.querySelector(".counter").innerHTML > 20 && item.querySelector(".counter").innerHTML <= 40) {
-          item.classList.add("mid-green-background")
+          item.classList.add("green40")
         }
         else if (item.querySelector(".counter").innerHTML > 40 && item.querySelector(".counter").innerHTML <= 60) {
-          item.classList.add("dark-green-background")
+          item.classList.add("green60")
         }
         else if (item.querySelector(".counter").innerHTML > 60 && item.querySelector(".counter").innerHTML <= 80) {
-          item.classList.add("light-red-background")
+          item.classList.add("green80")
         }
         else if (item.querySelector(".counter").innerHTML > 80 && item.querySelector(".counter").innerHTML <= 100) {
-          item.classList.add("mid-red-background")
+          item.classList.add("green100")
         }
-        else if (item.querySelector(".counter").innerHTML > 60 && item.querySelector(".counter").innerHTML <= 80) {
-          item.classList.add("dark-red-background")
+        else if (item.querySelector(".counter").innerHTML > 100 && item.querySelector(".counter").innerHTML <= 120) {
+          item.classList.add("green120")
+        }
+        else if (item.querySelector(".counter").innerHTML > 120 && item.querySelector(".counter").innerHTML <= 130) {
+          item.classList.add("green130")
+        }
+        else {
+          item.classList.add("red")
         }
       }
     });

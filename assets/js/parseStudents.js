@@ -1,6 +1,7 @@
 fetch("./students.json")
     .then(Response => Response.json())
     .then(data => {
+      // Options to display the date in alphabet
       const options = { year: 'numeric', month: 'long', day: 'numeric' };
       let dates = [
     {"date":"20/06/2022",
@@ -272,6 +273,7 @@ fetch("./students.json")
      {"date":"30/12/2024",
      "counter":0},
   ];
+  // Allows to change date string to date object
       function dateConversion(string) {
         const dateParts = string.split("/");
         const dateObject = new Date(+dateParts[2], dateParts[1] - 1, +dateParts[0]);
@@ -295,10 +297,11 @@ fetch("./students.json")
         <td class="email">${element[`Contact Email`]}</td>
       </tr>`)
       });
-          // Display all the dates we are tracking
+      // Display all the dates we are tracking
       dates.forEach(item => {
         document.getElementById('date-table').insertAdjacentHTML('beforeend', `<div class="week"><p>${dateConversion(item.date).toLocaleDateString("en-US", options)}:</p><p><span class="counter">${item.counter}</span> students</p></div>`);
       });
+      // Checking number in the counter div and changes color of card accordingly
       const weekDiv = document.getElementsByClassName("week");
       for (let item of weekDiv) {
         if (item.querySelector(".counter").innerHTML <= 20) {

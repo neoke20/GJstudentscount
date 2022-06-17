@@ -1,4 +1,4 @@
-fetch("./students.json")
+fetch("./studentsFukuoka.json")
     .then(Response => Response.json())
     .then(data => {
       // Options to display the date in alphabet
@@ -292,7 +292,7 @@ fetch("./students.json")
           <th scope="row">${element[`Student ID`]}</th>
           <td>${element[`Given Names`]}</td>
           <td>${element[`Family Name`]}</td>
-          <td>${element[`Japanese Name`]}</td>
+          <td class="jp-name">${element[`Japanese Name`]}</td>
           <td>${element.Agent}</td>
           <td>${element[`Course Start`]}</td>
           <td>${element[`Course End`]}</td>

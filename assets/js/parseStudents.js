@@ -1,6 +1,7 @@
 fetch("./students.json")
     .then(Response => Response.json())
     .then(data => {
+      const options = { year: 'numeric', month: 'long', day: 'numeric' };
       let dates = [
     {"date":"20/06/2022",
      "counter":0},
@@ -296,7 +297,7 @@ fetch("./students.json")
       });
           // Display all the dates we are tracking
       dates.forEach(item => {
-        document.getElementById('date-table').insertAdjacentHTML('beforeend', `<div class="week"><p>${item.date}:</p><p><span class="counter">${item.counter}</span> students</p></div>`);
+        document.getElementById('date-table').insertAdjacentHTML('beforeend', `<div class="week"><p>${dateConversion(item.date).toLocaleDateString("en-US", options)}:</p><p><span class="counter">${item.counter}</span> students</p></div>`);
       });
       const weekDiv = document.getElementsByClassName("week");
       for (let item of weekDiv) {

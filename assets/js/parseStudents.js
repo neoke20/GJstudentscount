@@ -301,31 +301,28 @@ fetch("./students.json")
       const weekDiv = document.getElementsByClassName("week");
       for (let item of weekDiv) {
         if (item.querySelector(".counter").innerHTML <= 20) {
-          item.classList.add("light-green-background")
+          item.classList.add("green20")
         }
         else if (item.querySelector(".counter").innerHTML > 20 && item.querySelector(".counter").innerHTML <= 40) {
-          item.classList.add("mid-green-background")
+          item.classList.add("green40")
         }
         else if (item.querySelector(".counter").innerHTML > 40 && item.querySelector(".counter").innerHTML <= 60) {
-          item.classList.add("dark-green-background")
+          item.classList.add("green60")
         }
         else if (item.querySelector(".counter").innerHTML > 60 && item.querySelector(".counter").innerHTML <= 80) {
-          item.classList.add("light-red-background")
+          item.classList.add("green80")
         }
         else if (item.querySelector(".counter").innerHTML > 80 && item.querySelector(".counter").innerHTML <= 100) {
-          item.classList.add("mid-red-background")
-        }
-        else if (item.querySelector(".counter").innerHTML > 80 && item.querySelector(".counter").innerHTML <= 100) {
-          item.classList.add("dark-red-background")
+          item.classList.add("green100")
         }
         else if (item.querySelector(".counter").innerHTML > 100 && item.querySelector(".counter").innerHTML <= 120) {
-          item.classList.add("dark-red-background")
+          item.classList.add("green120")
         }
         else if (item.querySelector(".counter").innerHTML > 120 && item.querySelector(".counter").innerHTML <= 130) {
-          item.classList.add("dark-red-background")
+          item.classList.add("green130")
         }
         else {
-          item.classList.add("dark-red-background")
+          item.classList.add("red")
         }
       }
     });

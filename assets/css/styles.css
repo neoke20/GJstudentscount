@@ -18,21 +18,27 @@
 .counter {
   font-weight: bold;
 }
-.light-green-background {
-  background-color: #74cd78;
+.green20 {
+  background-color: #a6f4aa;
 }
-.mid-green-background {
-  background-color: #4daa52;
+.green40 {
+  background-color: #6bc970;
 }
-.dark-green-background {
-  background-color: #388E3C;
+.green60 {
+  background-color: #59b55d;
 }
-.light-red-background {
-  background-color: #fa9e9e;
+.green80 {
+  background-color: #4ea952;
 }
-.mid-red-background {
-  background-color: #ff7a7a;
+.green100 {
+  background-color: #44a049;
 }
-.dark-red-background {
+.green120 {
+  background-color: #3e9642;
+}
+.green130 {
+  background-color: #2d7e31;
+}
+.red {
   background-color: #FF5252;
 }

@@ -3,6 +3,7 @@ fetch("./students.json")
     .then(data => {
       // Options to display the date in alphabet
       const options = { year: 'numeric', month: 'long', day: 'numeric' };
+      const today = new Date();
       let dates = [
     {"date":"20/06/2022",
      "counter":0},
@@ -285,17 +286,18 @@ fetch("./students.json")
         dates.forEach(item => {
           dateConversion(element[`Course Start`]).getTime() <= dateConversion(item.date).getTime() && dateConversion(element[`Course End`]).getTime() >= dateConversion(item.date).getTime() ? item.counter++ : "";
         });
-
-        document.getElementById("student-table").insertAdjacentHTML('beforeend', `<tr>
-        <th scope="row">${index + 1}</th>
-        <td>${element[`Given Names`]}</td>
-        <td>${element[`Family Name`]}</td>
-        <td>${element.Agent}</td>
-        <td>${element[`Course Start`]}</td>
-        <td>${element[`Course End`]}</td>
-        <td>${element[`Current Center`]}</td>
-        <td class="email">${element[`Contact Email`]}</td>
-      </tr>`)
+        if (dateConversion(element[`Course End`]).getTime() >= today.getTime()) {
+          document.getElementById("student-table").insertAdjacentHTML('beforeend', `<tr>
+          <th scope="row">${index + 1}</th>
+          <td>${element[`Given Names`]}</td>
+          <td>${element[`Family Name`]}</td>
+          <td>${element.Agent}</td>
+          <td>${element[`Course Start`]}</td>
+          <td>${element[`Course End`]}</td>
+          <td>${element[`Current Center`]}</td>
+          <td class="email">${element[`Contact Email`]}</td>
+        </tr>`)
+        }
       });
       // Display all the dates we are tracking
       dates.forEach(item => {

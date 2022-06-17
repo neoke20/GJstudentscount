@@ -289,7 +289,7 @@ fetch("./students.json")
         // conditional will only add students whose end date is after today, so no finished students will be added to the table
         if (dateConversion(element[`Course End`]).getTime() >= today.getTime()) {
           document.getElementById("student-table").insertAdjacentHTML('beforeend', `<tr>
-          <th scope="row">${index + 1}</th>
+          <th scope="row">${element[`Student ID`]}</th>
           <td>${element[`Given Names`]}</td>
           <td>${element[`Family Name`]}</td>
           <td>${element.Agent}</td>

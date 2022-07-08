@@ -304,25 +304,25 @@ fetch("./studentsNagoya.json")
       // Checking number in the counter div and changes color of card accordingly
       const weekDiv = document.getElementsByClassName("week");
       for (let item of weekDiv) {
-        if (item.querySelector(".counter").innerHTML <= 20) {
+        if (item.querySelector(".counter").innerHTML <= 5) {
           item.classList.add("green20")
         }
-        else if (item.querySelector(".counter").innerHTML > 20 && item.querySelector(".counter").innerHTML <= 40) {
+        else if (item.querySelector(".counter").innerHTML > 5 && item.querySelector(".counter").innerHTML <= 10) {
           item.classList.add("green40")
         }
-        else if (item.querySelector(".counter").innerHTML > 40 && item.querySelector(".counter").innerHTML <= 60) {
+        else if (item.querySelector(".counter").innerHTML > 10 && item.querySelector(".counter").innerHTML <= 15) {
           item.classList.add("green60")
         }
-        else if (item.querySelector(".counter").innerHTML > 60 && item.querySelector(".counter").innerHTML <= 80) {
+        else if (item.querySelector(".counter").innerHTML > 15 && item.querySelector(".counter").innerHTML <= 20) {
           item.classList.add("green80")
         }
-        else if (item.querySelector(".counter").innerHTML > 80 && item.querySelector(".counter").innerHTML <= 100) {
+        else if (item.querySelector(".counter").innerHTML > 20 && item.querySelector(".counter").innerHTML <= 30) {
           item.classList.add("green100")
         }
-        else if (item.querySelector(".counter").innerHTML > 100 && item.querySelector(".counter").innerHTML <= 120) {
+        else if (item.querySelector(".counter").innerHTML > 30 && item.querySelector(".counter").innerHTML <= 40) {
           item.classList.add("green120")
         }
-        else if (item.querySelector(".counter").innerHTML > 120 && item.querySelector(".counter").innerHTML <= 130) {
+        else if (item.querySelector(".counter").innerHTML > 40 && item.querySelector(".counter").innerHTML <= 55) {
           item.classList.add("green130")
         }
         else {

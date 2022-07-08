@@ -303,7 +303,7 @@ fetch("./studentsFukuoka.json")
       document.getElementById('highest-students').insertAdjacentHTML('beforeend', `<div class="week highest"><p>${dateConversion(highestStudentsNumber[0].date).toLocaleDateString("en-US", options)}:</p><p><span class="counter">${highestStudentsNumber[0].counter}</span> students</p></div>`);
       // Button to display/hide dates data in full
       document.getElementById('show-date-table').onclick = function() {
-        this.classList.toggle('d-none')
+        document.getElementById('date-table').classList.toggle('d-none')
       };
 
       // Display all the dates we are tracking

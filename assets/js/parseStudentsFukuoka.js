@@ -301,9 +301,12 @@ fetch("./studentsFukuoka.json")
       let highestStudentsNumber = dates.sort((a, b) => parseFloat(b.counter) - parseFloat(a.counter));
       // Insert the data to get the highest number of students
       document.getElementById('highest-students').insertAdjacentHTML('beforeend', `<div class="week highest"><p>${dateConversion(highestStudentsNumber[0].date).toLocaleDateString("en-US", options)}:</p><p><span class="counter">${highestStudentsNumber[0].counter}</span> students</p></div>`);
-      // Button to display/hide dates data in full
+      // Buttons to display/hide dates data in full
       document.getElementById('show-date-table').onclick = function() {
         document.getElementById('date-table').classList.toggle('d-none')
+      };
+      document.getElementById('show-students-table').onclick = function() {
+        document.getElementById('student-table').classList.toggle('d-none')
       };
 
       // Display all the dates we are tracking

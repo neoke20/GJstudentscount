@@ -18,6 +18,10 @@
 .counter {
   font-weight: bold;
 }
+.highest {
+  max-width: 150px;
+  margin: 0 auto 40px auto;
+}
 .green20 {
   background-color: #a6f4aa;
 }

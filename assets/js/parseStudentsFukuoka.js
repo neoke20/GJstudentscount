@@ -300,7 +300,7 @@ fetch("./studentsFukuoka.json")
       // Sort the dates array descending
       let highestStudentsNumber = dates.sort((a, b) => parseFloat(b.counter) - parseFloat(a.counter));
       // Insert the data to get the highest number of students
-      document.getElementById('highest-students').insertAdjacentHTML('beforeend', `<div class="week"><p>${dateConversion(highestStudentsNumber[0].date).toLocaleDateString("en-US", options)}:</p><p><span class="counter">${highestStudentsNumber[0].counter}</span> students</p></div>`)
+      document.getElementById('highest-students').insertAdjacentHTML('beforeend', `<div class="week highest"><p>${dateConversion(highestStudentsNumber[0].date).toLocaleDateString("en-US", options)}:</p><p><span class="counter">${highestStudentsNumber[0].counter}</span> students</p></div>`)
       // Display all the dates we are tracking
       dates.forEach(item => {
         document.getElementById('date-table').insertAdjacentHTML('beforeend', `<div class="week"><p>${dateConversion(item.date).toLocaleDateString("en-US", options)}:</p><p><span class="counter">${item.counter}</span> students</p></div>`);

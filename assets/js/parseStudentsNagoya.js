@@ -306,7 +306,7 @@ fetch("./studentsNagoya.json")
         document.getElementById('date-table').classList.toggle('d-none')
       };
       document.getElementById('show-students-table').onclick = function() {
-        document.getElementById('student-table').classList.toggle('d-none')
+        document.getElementById('table').classList.toggle('d-none')
       };
       // Display all the dates we are tracking
       dates.forEach(item => {

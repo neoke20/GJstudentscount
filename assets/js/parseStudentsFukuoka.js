@@ -310,7 +310,7 @@ fetch("./studentsFukuoka.json")
         document.getElementById('date-table').classList.toggle('d-none')
       };
       document.getElementById('show-students-table').onclick = function() {
-        document.getElementById('student-table').classList.toggle('d-none')
+        document.getElementById('table').classList.toggle('d-none')
       };
       // Checking number in the counter div and changes color of card accordingly
       const weekDiv = document.getElementsByClassName("week");

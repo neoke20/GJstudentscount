@@ -297,6 +297,10 @@ fetch("./studentsFukuoka.json")
         </tr>`)
         }
       });
+      // Display all the dates we are tracking
+      dates.forEach(item => {
+        document.getElementById('date-table').insertAdjacentHTML('beforeend', `<div class="week"><p>${dateConversion(item.date).toLocaleDateString("en-US", options)}:</p><p><span class="counter">${item.counter}</span> students</p></div>`);
+      });
       // Sort the dates array descending
       let highestStudentsNumber = dates.sort((a, b) => parseFloat(b.counter) - parseFloat(a.counter));
       // Insert the data to get the highest number of students
@@ -308,11 +312,6 @@ fetch("./studentsFukuoka.json")
       document.getElementById('show-students-table').onclick = function() {
         document.getElementById('student-table').classList.toggle('d-none')
       };
-
-      // Display all the dates we are tracking
-      dates.forEach(item => {
-        document.getElementById('date-table').insertAdjacentHTML('beforeend', `<div class="week"><p>${dateConversion(item.date).toLocaleDateString("en-US", options)}:</p><p><span class="counter">${item.counter}</span> students</p></div>`);
-      });
       // Checking number in the counter div and changes color of card accordingly
       const weekDiv = document.getElementsByClassName("week");
       for (let item of weekDiv) {
